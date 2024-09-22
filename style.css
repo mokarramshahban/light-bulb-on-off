@@ -1,0 +1,143 @@
+/* Default styles for all devices */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+body.on {
+    background: radial-gradient(#555, #111);
+}
+
+.wire {
+    position: absolute;
+    left: calc(50% - 2px);
+    bottom: 50%;
+    height: 50vh;
+    width: 4px;
+    background: #000;
+    z-index: 1;
+}
+
+.bulb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    z-index: 2;
+}
+
+.bulb i {
+    font-size: 4rem;
+    color: #444;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.switch {
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: grey 0px 10px 15px -5px;
+    cursor: pointer;
+}
+
+.switch i {
+    font-size: 1.5rem;
+}
+
+.on .bulb i {
+    color: #ffd700;
+}
+
+.on .switch {
+    background: #4caf50;
+}
+
+/* Media Queries */
+
+/* For tablets (width: 768px and up) */
+@media (max-width: 768px) {
+    .bulb {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bulb i {
+        font-size: 3rem;
+    }
+
+    .switch {
+        top: 40px;
+        right: 50px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .switch i {
+        font-size: 1rem;
+    }
+}
+
+/* For mobile devices (width: 480px and up) */
+@media (max-width: 480px) {
+    .bulb {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bulb i {
+        font-size: 2.5rem;
+    }
+
+    .switch {
+        top: 20px;
+        right: 20px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .switch i {
+        font-size: 0.9rem;
+    }
+}
+
+/* For very small devices (width: 320px and below) */
+@media (max-width: 320px) {
+    .bulb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bulb i {
+        font-size: 2rem;
+    }
+
+    .switch {
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .switch i {
+        font-size: 0.8rem;
+    }
+}
